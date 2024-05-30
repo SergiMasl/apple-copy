@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/apple-copy/static/css/main.65841ca2.css",
-    "main.js": "/apple-copy/static/js/main.dc1b56b9.js",
+    "main.css": "/apple-copy/static/css/main.77dcf33a.css",
+    "main.js": "/apple-copy/static/js/main.012226e8.js",
     "static/media/iphone.png": "/apple-copy/static/media/iphone.56854cd97e25a521448d.png",
     "static/media/ipad_home.png": "/apple-copy/static/media/ipad_home.82225ad24bb4d5497107.png",
     "static/media/ipad_home-sm.png": "/apple-copy/static/media/ipad_home-sm.0e9b717b04e1d74dc696.png",
     "static/media/iphone-sm.png": "/apple-copy/static/media/iphone-sm.b8223f4ce550de7eeb19.png",
     "index.html": "/apple-copy/index.html",
-    "main.65841ca2.css.map": "/apple-copy/static/css/main.65841ca2.css.map",
-    "main.dc1b56b9.js.map": "/apple-copy/static/js/main.dc1b56b9.js.map"
+    "main.77dcf33a.css.map": "/apple-copy/static/css/main.77dcf33a.css.map",
+    "main.012226e8.js.map": "/apple-copy/static/js/main.012226e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.65841ca2.css",
-    "static/js/main.dc1b56b9.js"
+    "static/css/main.77dcf33a.css",
+    "static/js/main.012226e8.js"
   ]
 }
