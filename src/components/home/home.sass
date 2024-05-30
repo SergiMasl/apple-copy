@@ -1,0 +1,126 @@
+@import "../../styles/_var"
+.container
+    width: 100%
+    max-width: 100%
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+
+.homepage-section
+    width: 100%
+    max-width: 100%
+
+    .collection-module
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        background-color: $--sk-fill
+        padding-top: 250px
+        @media screen and (max-width: 833px)
+            padding-top: 210px
+
+.collection-module-link
+    width: 100%
+    max-width: 100%
+    background-color: $--sk-fill
+    display: flex
+    justify-content: center
+
+    .collection-module-img
+        width: 600px
+        max-width: 600px
+        @media screen and (max-width: 833px)
+            width: 400px
+            max-width: 400px
+        @media screen and (max-width: 530px)
+            display: none
+    .collection-module-img-sm
+        @media screen and (min-width: 531px)
+            display: none
+        @media screen and (max-width: 530px)
+            display: block
+            width: 200px
+            max-width: 200px
+
+.collection-module-content
+    position: absolute
+    top: 85px
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media screen and (max-width: 833px)
+        top: 55px
+
+    a, h2, p
+        color: #fff
+    h2
+        font-size: 48px
+        line-height: 1.08349
+        font-weight: 600
+        letter-spacing: -.002em
+        @media screen and (max-width: 833px)
+            font-size: 32px
+            line-height: 1.125
+            letter-spacing: .004em
+    p
+        width: 100%
+        font-size: 24px
+        line-height: 1.16667
+        font-weight: 400
+        letter-spacing: .009em
+        margin-top: 5px
+        text-align: center
+        @media screen and (max-width: 833px)
+
+            font-size: 19px
+            line-height: 1.21053
+            letter-spacing: .012em
+    .cta-links
+        margin-top: 30px
+        @media screen and (max-width: 194px)
+            flex-direction: column
+            display: flex
+            gap: 5px
+            align-items: center
+        .button
+            border: 1px solid $--sk-button-background
+            padding: 11px 21px
+            border-radius: 25px
+            @media screen and (max-width: 833px)
+                padding: 7px 15px
+
+        .button-primary
+            font-size: 17px
+            line-height: 1.17648
+            font-weight: 400
+            letter-spacing: -.022em
+            min-width: 28px
+            color: #fff
+            background-color: $--sk-button-background
+            &:hover
+                background-color: $--sk-fill
+                color: $--sk-button-background
+                @media screen and (max-width: 833px)
+                    font-size: 14px
+                    line-height: 1.42859
+                    letter-spacing: -.016em
+
+        .button-tertiary
+            font-size: 17px
+            line-height: 1.17648
+            font-weight: 400
+            letter-spacing: -.022em
+            margin-left: 13px
+            color: $--sk-button-background
+            &:hover
+                background-color: $--sk-button-background
+                color: #fff
+                @media screen and (max-width: 833px)
+                    font-size: 14px
+                    line-height: 1.42859
+                    letter-spacing: -.016em
+
+.collection-module-gap
+    margin-top: 15px

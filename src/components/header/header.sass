@@ -1,0 +1,46 @@
+@import "../../styles/_var"
+.header
+    max-width: 100%
+    width: 100%
+    background-color: $--globalnav-background
+    display: flex
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+
+    nav
+        width: 1000px
+        display: flex
+        justify-content: space-around
+
+        a
+            font-size: 12px
+            font-weight: 400
+            letter-spacing: -.01em
+            padding: 15px 0
+            text-align: center
+            color: #fff
+
+        .burger-nav
+            display: none
+            @media screen and (max-width: 833px)
+                display: block
+                position: absolute
+                right: 50px
+
+@media screen and (max-width: 833px)
+    .minor-nav
+        display: none
+    .search-sm
+        position: absolute
+        right: 100px
+
+    .log-sm
+        position: absolute
+        right: 150px
+
+    .logo-sm
+        position: absolute
+        left: 50px
