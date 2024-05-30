@@ -1,10 +1,10 @@
-import React from "react";
-import "./header.sass";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiFillApple } from "react-icons/ai";
 import { HiSearch } from "react-icons/hi";
 import { IoBagOutline } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { slide as Menu } from "react-burger-menu";
+import "./header.sass";
 
 export default function Header() {
   const headerArray = [
@@ -32,22 +32,30 @@ export default function Header() {
     },
     { id: "log", title: <IoBagOutline />, link: "#", class: "main-nav log-sm" },
   ];
-  return (
-    <header className="header">
-      <nav>
-        <Link to="/apple-copy" className="logo-sm">
-          <AiFillApple />
-        </Link>
 
-        {headerArray.map((item) => (
-          <Link to={item.link} key={item.id} className={item.class}>
-            {item.title}
+  return (
+    <>
+      <header className="header">
+        <nav>
+          <Link to="/apple-copy" className="logo-sm">
+            <AiFillApple />
           </Link>
-        ))}
-        <Link to="" className="burger-nav burger-sm">
-          <GiHamburgerMenu />
-        </Link>
-      </nav>
-    </header>
+          {headerArray.map((item) => (
+            <Link to={item.link} key={item.id} className={item.class}>
+              {item.title}
+            </Link>
+          ))}
+          <div className="burger-nav burger-sm">
+            {/* <Menu right>
+              {headerArray.map((item) => (
+                <a key={item.id} className="menu-item" href={item.link}>
+                  {item.title}
+                </a>
+              ))}
+            </Menu> */}
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

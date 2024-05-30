@@ -1,0 +1,153 @@
+@import "../../../styles/_var"
+.footer-container
+    width: 100%
+    max-width: 100%
+    display: flex
+    justify-content: center
+    background-color: $--footer-background
+    margin-top: 50px
+    .footer-wrap
+        width: 90%
+        max-width: 90%
+        ul
+            padding: 17px 0 11px 0
+            li
+                color: $--footer-text-color
+                font-size: 12px
+                line-height: 1.3333733333
+                font-weight: 400
+                margin-bottom: 10px
+                text-align: justify
+
+        .footer-links
+            padding-top: 20px
+            display: flex
+            justify-content: space-between
+            width: 100%
+            border-top: 1px solid $--footer-pipe-color
+            @media screen and (max-width: 970px)
+                flex-direction: column
+
+            div
+                width: 196px
+                @media screen and (max-width: 970px)
+                    width: 100%
+                    max-width: 100%
+
+                h3
+                    font-size: 12px
+                    line-height: 1.3333733333
+                    font-weight: 800
+                    letter-spacing: -0.01em
+                    padding-bottom: .8em
+                    @media screen and (max-width: 970px)
+                        border-bottom: 1px solid $--footer-pipe-color
+                        font-weight: normal
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                    .sm-arror-li
+                        display: none
+                        @media screen and (max-width: 970px)
+                            display: block
+                            transition: 0.5s
+                            transition-property: transform
+                    .arror-turn
+                        transform: rotate(3.142rad)
+
+                .ul-
+                    padding: 10px 20px
+                    @media screen and (max-width: 970px)
+                        max-height: 0px
+                        opacity: 0
+                        overflow: hidden
+                        transition: 0.5s
+                        transition-property: max-height, opacity
+                        transition-timing-function: ease-in-out
+                        pointer-events: none
+                    li
+                        display: block
+                        pointer-events: auto
+                        margin-bottom: .7em
+                        @media screen and (max-width: 970px)
+                            margin-bottom: 0
+
+                        a
+                            font-size: 12px
+                            color: $--footer-link-color
+                            &:hover
+                                border-bottom: 1px solid $--footer-link-color
+
+                @media screen and (max-width: 970px)
+                    .ul-footeOpen
+                        max-height: 300px
+
+                        overflow: visible
+                        opacity: 1
+
+.footer-bt
+    width: 100%
+    max-width: 100%
+
+    .footer-bt-title
+        display: flex
+        align-items: center
+        gap: 3px
+        font-size: 12px
+        border-bottom: 1px solid $--footer-pipe-color
+        margin-bottom: 17px
+        padding-bottom: 18px
+        @media screen and (max-width: 640px)
+            font-size: 12px
+            flex-direction: column
+        p
+            color: $--footer-text-color
+        a
+            color: $--footer-mini-shop-link-color
+            border-bottom: 1px solid $--footer-mini-shop-link-color
+            font-size: 12px
+            @media screen and (max-width: 640px)
+                font-size: 12px
+    .footer-bt-copuright
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 18px
+        @media screen and (max-width: 640px)
+            flex-direction: column
+            justify-content: start
+            align-items: self-start
+            gap: 10px
+
+        .copuright-wrapper
+            display: flex
+            justify-content: space-between
+            align-items: center
+            max-width: 700px
+            @media screen and (max-width: 820px)
+                flex-direction: column
+                align-items: self-start
+                gap: 10px
+                max-width: 400px
+            .text-copyright
+                font-size: 12px
+                margin-right: 10px
+            .copyright-links
+                max-width: 400px
+                font-size: 12px
+                @media screen and (max-width: 640px)
+                    font-size: 10px
+                a
+                    color: $--footer-text-color
+                span
+                    margin: 0 5px
+                    color: $--footer-text-color
+                    @media screen and (max-width: 640px)
+                        font-size: 10px
+                        margin: 0 3px
+
+        .country-link
+            font-size: 12px
+            color: $--footer-text-color
+            @media screen and (max-width: 640px)
+                margin: auto
