@@ -8,14 +8,44 @@ import "./header.sass";
 
 export default function Header() {
   const headerArray = [
-    { id: "store", title: "Store", link: "#", class: "minor-nav" },
-    { id: "mac", title: "Mac", link: "#", class: "minor-nav" },
-    { id: "ipad", title: "iPad", link: "#", class: "minor-nav" },
-    { id: "iphone", title: "iPhone", link: "#", class: "minor-nav" },
-    { id: "watch", title: "Watch", link: "#", class: "minor-nav" },
-    { id: "vision", title: "Vision", link: "#", class: "minor-nav" },
-    { id: "airpods", title: "AirPods", link: "#", class: "minor-nav" },
-    { id: "tv", title: "TV & Home", link: "#", class: "minor-nav" },
+    { id: "store", title: "Store", link: "#", class: "minor-nav", type: "svg" },
+    { id: "mac", title: "Mac", link: "#", class: "minor-nav", type: "text" },
+    { id: "ipad", title: "iPad", link: "#", class: "minor-nav", type: "text" },
+    {
+      id: "iphone",
+      title: "iPhone",
+      link: "#",
+      class: "minor-nav",
+      type: "text",
+    },
+    {
+      id: "watch",
+      title: "Watch",
+      link: "#",
+      class: "minor-nav",
+      type: "text",
+    },
+    {
+      id: "vision",
+      title: "Vision",
+      link: "#",
+      class: "minor-nav",
+      type: "text",
+    },
+    {
+      id: "airpods",
+      title: "AirPods",
+      link: "#",
+      class: "minor-nav",
+      type: "text",
+    },
+    {
+      id: "tv",
+      title: "TV & Home",
+      link: "#",
+      class: "minor-nav",
+      type: "text",
+    },
     {
       id: "entertainment",
       title: "Entertainment",
@@ -29,8 +59,15 @@ export default function Header() {
       title: <HiSearch />,
       link: "#",
       class: "main-nav search-sm",
+      type: "svg",
     },
-    { id: "log", title: <IoBagOutline />, link: "#", class: "main-nav log-sm" },
+    {
+      id: "log",
+      title: <IoBagOutline />,
+      link: "#",
+      class: "main-nav log-sm",
+      type: "svg",
+    },
   ];
 
   return (
