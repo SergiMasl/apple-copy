@@ -87,7 +87,7 @@ export default function Storage({
           Prev
         </button>
         <button
-          className="shop-next"
+          className={`shop-next ${chosentStorage == "" ? "notAvalable" : ""}`}
           onClick={() => {
             phoneHandleStorages(chosentStorage, chosentCost);
             goTo();

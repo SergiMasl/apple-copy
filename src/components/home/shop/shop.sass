@@ -20,6 +20,9 @@ $cl-focuse-btm: #0171e3
         .servise-ad-wrap
             width: 800px
             max-width: 800px
+            margin-bottom: 1em
+            @media screen and (max-width: 800px)
+                width: 100%
 
             .servise-ad-content
                 padding: 10px 50px
@@ -28,15 +31,22 @@ $cl-focuse-btm: #0171e3
                 align-items: center
                 background-color: $cl-shop-bg
                 border-radius: 5px
+                @media screen and (max-width: 570px)
+                    padding: 5px 5px
 
                 .servise-ad-item
                     display: flex
                     align-items: center
+                    @media screen and (max-width: 570px)
+                        flex-direction: column
+                        text-align: center
+                        font-size: 10px
 
                     .servise-ad-img
                         height: 24px
                         width: auto
-
+                        @media screen and (max-width: 570px)
+                            height: 14px
                     p
                         font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif
                         font-size: 12px
@@ -44,6 +54,8 @@ $cl-focuse-btm: #0171e3
                         letter-spacing: -.01em
                         line-height: 1.3333733333
                         margin-inline-start: 12px
+                        @media screen and (max-width: 570px)
+                            font-size: 10px
     .my-phone
         width: 100%
 
@@ -57,17 +69,28 @@ $cl-focuse-btm: #0171e3
             letter-spacing: -.003em
             line-height: 1.0834933333
             padding-bottom: 8px
+            @media screen and (max-width: 800px)
+                font-size: 28px
+            @media screen and (max-width: 800px)
+                text-align: center
+            @media screen and (max-width: 350px)
+                font-size: 18px
         .shop-container
             width: 100%
             display: flex
             justify-content: space-between
             align-items: center
+            @media screen and (max-width: 800px)
+                flex-direction: column
             .img-wrap
                 width: 49%
                 .img-item
                     width: 100%
             .sale-detales
                 width: 49%
+                @media screen and (max-width: 800px)
+                    margin-top: 2em
+                    width: 90%
 
                 .sale-detales-title
                     margin-bottom: 2em
@@ -76,32 +99,47 @@ $cl-focuse-btm: #0171e3
                     font-weight: 600
                     letter-spacing: .009em
                     line-height: 1.1666666667
+                    @media screen and (max-width: 800px)
+                        font-size: 16px
+                    @media screen and (max-width: 540px)
+                        font-size: 10px
                     span
                         color: #86868b
 
                 .model-list, .storage-list
                     width: 100%
+                    max-width: 100%
                     list-style: none
                     margin-top: 8px
                     display: flex
                     flex-direction: column
                     gap: 30px
+                    @media screen and (max-width: 800px)
+                        flex-direction: row
+                        justify-content: center
+                    @media screen and (max-width: 625px)
+                        flex-direction: column
+                        gap: 15px
                     .chooseModel-btm
                         display: flex
                         justify-content: space-between
                         align-items: center
                         border: 1px solid #000
-                        padding: 10px 20px
+                        padding: 8px 18px
                         border-radius: 9px
-
+                        gap: 2em
                         .model-name-top-text
                             font-weight: 600
                             margin-bottom: 0.3rem
+                            @media screen and (max-width: 540px)
+                                font-size: 12px
                         .model-name-lower-text
                             font-size: 12px
                             font-weight: 400
                             letter-spacing: -.01em
                             line-height: 1.3333733333
+                            @media screen and (max-width: 540px)
+                                font-size: 10px
                         .model-description
                             display: flex
                             flex-direction: column
@@ -113,6 +151,8 @@ $cl-focuse-btm: #0171e3
                             letter-spacing: -.01em
                             line-height: 1.3333733333
                             color: #1d1d1f
+                            @media screen and (max-width: 540px)
+                                font-size: 8px
                         &:hover
                             background-color: #0171e3
                             color: #fff
@@ -127,6 +167,9 @@ $cl-focuse-btm: #0171e3
     flex-direction: row
     gap: 15px
     margin-top: 1em
+    @media screen and (max-width: 800px)
+        align-items: center
+        justify-content: center
     .color-item
         display: inline-block
         margin: 5px
@@ -170,3 +213,6 @@ $cl-focuse-btm: #0171e3
         border-radius: 5px
 
 .final-wrap
+.notAvalable
+    pointer-events: none
+    filter: blur(1px)

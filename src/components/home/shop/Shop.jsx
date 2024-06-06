@@ -23,19 +23,6 @@ export default function Shop() {
       { model: "iPhone 15 Pro", display: "6.1", cost: 999, cost2: 41.62 },
       { model: "iPhone 15 Pro Max", display: "6.7", cost: 1199, cost2: 49.95 },
     ],
-
-    //   {
-    //     gb: 256,
-    //     content: {
-    //       name: "iPhone 15 Pro",
-    //       type: [
-    //         { type: "sm", display: 6.1, cost: 999, cost2: 41.62 },
-    //         { type: "bg", display: 6.7, cost: 1199, cost2: 49.95 },
-    //       ],
-    //       color: ["#e9e7e4", "#c8cbcf", "#fcfbf9", "#cccccd"],
-    //     },
-    //   },
-    // ],
   };
 
   const phoneHandle = (display, model) => {
@@ -53,7 +40,18 @@ export default function Shop() {
       colorName: name,
     }));
   };
-  const goBack = () => {
+  const goBack = (e) => {
+    console.log(e);
+    if (e == 0) {
+      setMyPhone({
+        display: "",
+        model: "",
+        color: "",
+        colorName: "",
+        storage: "",
+        cost: "",
+      });
+    }
     setStepOfSell(stepOfSell - 1);
   };
   const goTo = () => {
@@ -71,12 +69,6 @@ export default function Shop() {
     <div className="shop">
       <div className="shop-wrap">
         <ServiceAd />
-        <div className="my-phone">
-          <p>
-            Your iPhone: {myPhone.display} {myPhone.model} {myPhone.colorName}{" "}
-            {myPhone.storage}
-          </p>
-        </div>
         <section className="iPhone-wrap">
           <h2 className="iphone-title">
             Buy {myPhone.model == "" ? `iPhone ${iPhones.id}` : myPhone.model}

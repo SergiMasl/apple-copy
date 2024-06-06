@@ -14,7 +14,7 @@ export default function Color({
     { name: "White Titanium", color: "#fcfbf9" },
     { name: "Black Titanium", color: "#cccccd" },
   ];
-
+  console.log(cooseColorName);
   const handleColorChange = (name, color) => {
     setCooseColorName(name);
     setCooseColor(color);
@@ -51,15 +51,15 @@ export default function Color({
           className="shop-next"
           onClick={() => {
             phoneHandleColor(cooseColor, cooseColorName);
-            goBack();
+            goBack(0);
           }}
         >
           Prev
         </button>
         <button
-          className="shop-next"
+          className={`shop-next ${cooseColorName == "" ? "notAvalable" : ""}`}
           onClick={() => {
-            phoneHandleColor(cooseColor, cooseColorName);
+            phoneHandleColor(cooseColorName, cooseColorName);
             goTo();
           }}
         >
