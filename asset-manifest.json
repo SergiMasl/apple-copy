@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/apple-copy/static/css/main.c9dc2e71.css",
-    "main.js": "/apple-copy/static/js/main.01acfdae.js",
+    "main.css": "/apple-copy/static/css/main.8be42a68.css",
+    "main.js": "/apple-copy/static/js/main.7589f7f6.js",
     "static/media/iphone.png": "/apple-copy/static/media/iphone.56854cd97e25a521448d.png",
     "static/media/ipad_home.png": "/apple-copy/static/media/ipad_home.82225ad24bb4d5497107.png",
     "static/media/ipad_home-sm.png": "/apple-copy/static/media/ipad_home-sm.0e9b717b04e1d74dc696.png",
     "static/media/iphone-sm.png": "/apple-copy/static/media/iphone-sm.b8223f4ce550de7eeb19.png",
+    "static/media/deliver.svg": "/apple-copy/static/media/deliver.f15f2554fa86a5e755a403e4db0b904b.svg",
     "index.html": "/apple-copy/index.html",
-    "main.c9dc2e71.css.map": "/apple-copy/static/css/main.c9dc2e71.css.map",
-    "main.01acfdae.js.map": "/apple-copy/static/js/main.01acfdae.js.map"
+    "main.8be42a68.css.map": "/apple-copy/static/css/main.8be42a68.css.map",
+    "main.7589f7f6.js.map": "/apple-copy/static/js/main.7589f7f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9dc2e71.css",
-    "static/js/main.01acfdae.js"
+    "static/css/main.8be42a68.css",
+    "static/js/main.7589f7f6.js"
   ]
 }
