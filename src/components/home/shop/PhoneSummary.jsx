@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./summary.sass";
 import Deliver from "../../../assece/deliver.svg";
+import BagContext from "../../../Context/BagContext";
+import { Link } from "react-router-dom";
+import { PiTruckThin } from "react-icons/pi";
 
 export default function PhoneSummary({
   myPhone,
   isCashOptions,
   isServiseChoosen,
 }) {
+  const { setLastAddedProduct, setItems } = useContext(BagContext);
+  const addToBag = (product) => {
+    setItems((prevProducts) => [...prevProducts, product]);
+  };
+
+  const addTempBag = (product) => {
+    setLastAddedProduct(product);
+  };
+
   return (
     <div
       className={`summary ${isServiseChoosen != "" ? "summary-visible" : ""}`}
@@ -30,14 +42,24 @@ export default function PhoneSummary({
           </div>
         </div>
         <div className="summary-wrap-rigth">
-          <div>
-            <img src={Deliver} />
-            <div>
+          <div className="summary-wrap-rigth-truck">
+            <PiTruckThin />
+
+            <div className="summary-wrap-rigth-text">
               <h4>Delivery:</h4>
               <p>In Stock Free Shipping</p>
             </div>
           </div>
-          <button className="phone-add">Add to Bag</button>
+          <Link
+            to="/apple-copy/bag"
+            className="phone-add"
+            onClick={() => {
+              addTempBag(myPhone);
+              addToBag(myPhone);
+            }}
+          >
+            Add to Bag
+          </Link>
         </div>
       </div>
     </div>

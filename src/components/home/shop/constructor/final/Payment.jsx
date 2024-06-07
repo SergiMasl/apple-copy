@@ -28,10 +28,7 @@ export default function Payment({
 
       <div className={`paymet-wrapper-sub ${isCashOptions ? "activePay" : ""}`}>
         <h3 className="paymet-title">Connectivity. Choose a carrier.</h3>
-        <ServesOption
-          myPhone={myPhone}
-          setIsServiseChoosen={setIsServiseChoosen}
-        />
+        <ServesOption setIsServiseChoosen={setIsServiseChoosen} />
       </div>
 
       {/* <div

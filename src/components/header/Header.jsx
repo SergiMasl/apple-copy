@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { AiFillApple } from "react-icons/ai";
 import { HiSearch } from "react-icons/hi";
 import { IoBagOutline } from "react-icons/io5";
-import { slide as Menu } from "react-burger-menu";
+import Burger from "./Burger";
 import "./header.sass";
 
+import BagContext from "../../Context/BagContext";
+import { useContext } from "react";
+
 export default function Header() {
+  const { items } = useContext(BagContext);
+  const [isBurgerOn, setIsBurgerOn] = useState("");
+  const [isOpen, setIsOpen] = useState("");
+
   const headerArray = [
     { id: "store", title: "Store", link: "#", class: "minor-nav", type: "svg" },
     { id: "mac", title: "Mac", link: "#", class: "minor-nav", type: "text" },
@@ -61,13 +68,6 @@ export default function Header() {
       class: "main-nav search-sm",
       type: "svg",
     },
-    {
-      id: "log",
-      title: <IoBagOutline />,
-      link: "#",
-      class: "main-nav log-sm",
-      type: "svg",
-    },
   ];
 
   return (
@@ -82,18 +82,35 @@ export default function Header() {
               {item.title}
             </Link>
           ))}
-          <div className="burger-nav burger-sm">
-            {/* <Menu right>
-              {headerArray.map((item) => (
-                <a key={item.id} className="menu-item" href={item.link}>
-                  {item.title}
-                </a>
-              ))}
-            </Menu> */}
-            {/* test */}
+
+          <Link to="/apple-copy/cart" className="main-nav main-nav-bag log-sm">
+            <div className="main-nav-bag-wrap">
+              <IoBagOutline />
+              <span className="main-nav-bag-numbers ">{items.length}</span>
+            </div>
+          </Link>
+
+          <div className="burger-nav burger-sm ">
+            <Burger
+              isBurgerOn={isBurgerOn}
+              setIsBurgerOn={setIsBurgerOn}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+            />
           </div>
         </nav>
       </header>
+      <div
+        className={`small-menu-popup-closed${
+          isOpen ? " small-menu-popup" : ""
+        }`}
+      >
+        {headerArray.map((item) => (
+          <Link key={item.id} className="menu-item non-visible" to={item.link}>
+            {item.title}
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

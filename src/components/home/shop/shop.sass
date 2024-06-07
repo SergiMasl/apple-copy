@@ -17,12 +17,22 @@ $cl-focuse-btm: #0171e3
         align-items: center
         flex-direction: column
 
+        @media screen and (max-width: 910px)
+            width: 95%
+            width: 95%
+
         .servise-ad-wrap
             width: 800px
             max-width: 800px
             margin-bottom: 1em
             @media screen and (max-width: 800px)
-                width: 100%
+                width: 600px
+                max-width: 600px
+            @media screen and (max-width: 599px)
+                width: 300px
+                width: 300px
+            @media screen and (max-width: 270px)
+                display: none
 
             .servise-ad-content
                 padding: 10px 50px
@@ -31,13 +41,13 @@ $cl-focuse-btm: #0171e3
                 align-items: center
                 background-color: $cl-shop-bg
                 border-radius: 5px
-                @media screen and (max-width: 570px)
+                @media screen and (max-width: 600px)
                     padding: 5px 5px
 
                 .servise-ad-item
                     display: flex
                     align-items: center
-                    @media screen and (max-width: 570px)
+                    @media screen and (max-width: 600px)
                         flex-direction: column
                         text-align: center
                         font-size: 10px
@@ -45,7 +55,7 @@ $cl-focuse-btm: #0171e3
                     .servise-ad-img
                         height: 24px
                         width: auto
-                        @media screen and (max-width: 570px)
+                        @media screen and (max-width: 600px)
                             height: 14px
                     p
                         font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif
@@ -54,13 +64,14 @@ $cl-focuse-btm: #0171e3
                         letter-spacing: -.01em
                         line-height: 1.3333733333
                         margin-inline-start: 12px
-                        @media screen and (max-width: 570px)
+                        @media screen and (max-width: 600px)
                             font-size: 10px
     .my-phone
         width: 100%
 
     .iPhone-wrap
         width: 100%
+        max-width: 100%
         .iphone-title
             color: #1d1d1f
             font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif
