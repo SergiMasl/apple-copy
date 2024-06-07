@@ -5,6 +5,8 @@ import Model from "./constructor/Model";
 import Color from "./constructor/Color";
 import Storage from "./constructor/Storage";
 import TotalPhone from "./constructor/TotalPhone";
+import Payment from "./constructor/final/Payment";
+import PhoneSummary from "./PhoneSummary";
 
 export default function Shop() {
   const [myPhone, setMyPhone] = useState({
@@ -16,6 +18,8 @@ export default function Shop() {
     cost: "",
   });
   const [stepOfSell, setStepOfSell] = useState(1);
+  const [isServiseChoosen, setIsServiseChoosen] = useState("");
+  const [isCashOptions, setIsCashOptions] = useState(false);
 
   const iPhones = {
     id: "15-pro",
@@ -71,7 +75,7 @@ export default function Shop() {
         <ServiceAd />
         <section className="iPhone-wrap">
           <h2 className="iphone-title">
-            Buy {myPhone.model == "" ? `iPhone ${iPhones.id}` : myPhone.model}
+            Buy {myPhone.model === "" ? `iPhone ${iPhones.id}` : myPhone.model}
           </h2>
           <div className="shop-container">
             <div className="img-wrap">
@@ -80,7 +84,7 @@ export default function Shop() {
                 src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=VW44dkRidm5wazhwcGxtL0cyaEJ2VTkrNXBUdUJSK1k4NE5seUtJaW80ZEk5aWVjRmFBS2tnWEF6QzlCMm5HL0pOZTBYalh5Vk90cEc1K2wwRzFGejRMeXJHUnUva2huMjl4akFHOXNwVjA0YXFmK3VWSWZuRE9oVEFyUFR0T2hBa0RRdWFDUTBBczVnS0JqV3BGbkxRPT0=&traceId=1"
               />
             </div>
-            {stepOfSell == 1 && (
+            {stepOfSell === 1 && (
               <Model model={iPhones.preCost} phoneHandle={phoneHandle} />
             )}
             {stepOfSell == 2 && (
@@ -91,7 +95,7 @@ export default function Shop() {
                 currentColor={myPhone.colorName}
               />
             )}
-            {stepOfSell == 3 && (
+            {stepOfSell === 3 && (
               <Storage
                 model={myPhone.model}
                 phoneHandleStorages={phoneHandleStorages}
@@ -101,12 +105,25 @@ export default function Shop() {
                 goTo={goTo}
               />
             )}
-            {stepOfSell == 4 && (
+            {stepOfSell === 4 && (
               <TotalPhone goBack={goBack} myPhone={myPhone} />
             )}
           </div>
+          <Payment
+            myPhone={myPhone}
+            stepOfSell={stepOfSell}
+            setIsServiseChoosen={setIsServiseChoosen}
+            isServiseChoosen={isServiseChoosen}
+            isCashOptions={isCashOptions}
+            setIsCashOptions={setIsCashOptions}
+          />
         </section>
       </div>
+      <PhoneSummary
+        myPhone={myPhone}
+        isCashOptions={isCashOptions}
+        isServiseChoosen={isServiseChoosen}
+      />
     </div>
   );
 }
