@@ -1,0 +1,124 @@
+.paymet-wrap
+    width: 100%
+    margin-top: 2em
+    gap: 2em
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    // height: 0
+    opacity: 0
+    overflow: hidden
+    transition: 0.3s
+    transition-property: opacity
+    transition-timing-function: ease-in-out
+    pointer-events: none
+
+    .paymet-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        gap: 2em
+
+        .paymet-title
+            align-self: flex-start
+            font-size: 24px
+            font-weight: 600
+            letter-spacing: .009em
+            line-height: 1.1666666667
+            @media screen and (max-width: 600px)
+                font-size: 14px
+                font-weight: 400
+            span
+                color: #86868b
+        .paymet-option-wrap
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @media screen and (max-width: 500px)
+                flex-direction: column
+                gap: 10px
+            .paymet-option-item
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                flex-direction: column
+                width: 40%
+                height: 150px
+                background-color: #fffc
+                color: #1d1d1f
+                border: 1px solid #86868b
+                padding: 20px
+                border-radius: 12px
+                @media screen and (max-width: 600px)
+                    height: 100px
+                    padding: 10px
+                @media screen and (max-width: 500px)
+                    width: 90%
+
+                .paymet-option-content
+                    h5
+                        font-weight: 600
+                        line-height: 1
+                        @media screen and (max-width: 600px)
+                            margin-bottom: 5px
+                    p
+                        margin-top: 10px
+                        font-size: 17px
+                        font-weight: 400
+                        letter-spacing: -.022em
+                        line-height: 1.4705882353
+                        line-height: 1.2
+                        margin-bottom: 10px
+                        @media screen and (max-width: 600px)
+                            font-size: 12px
+                            margin: 0
+                        span
+                            font-size: 15px
+                .paymet-option-content--info
+                    font-size: 12px
+                    font-weight: 400
+                    letter-spacing: -.01em
+
+    .paymet-wrapper-sub
+
+        opacity: 0
+        overflow: hidden
+        transition: 0.3s
+        transition-property: opacity
+        transition-timing-function: ease-in-out
+        pointer-events: none
+        display: flex
+        flex-direction: column
+        gap: 1em
+        .paymet-servise-wrap
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+            justify-content: center
+            gap: 10px
+
+            .paymet-option-wrap
+                width: 160px
+                height: 80px
+                border: 1px solid #86868b
+                padding: 10px 20px
+                border-radius: 12px
+                @media screen and (max-width: 431px)
+                    height: 40px
+                img
+                    width: 90px
+                    @media screen and (max-width: 431px)
+                        width: 60px
+
+    .activePay
+
+        overflow: visible
+        opacity: 1
+        pointer-events: all
+
+.activePay-wrap
+
+    overflow: visible
+    opacity: 1
+    pointer-events: all

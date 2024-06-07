@@ -19,7 +19,7 @@ export default function SectionAdSecondary() {
           <Link to="" className="button button-elevated button-primary">
             Learn more
           </Link>
-          <Link to="" className="button button-elevated button-tertiary">
+          <Link to="shop" className="button button-elevated button-tertiary">
             Buy
           </Link>
         </div>
